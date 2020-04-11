@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import {Link} from 'react-router-dom';
 
 
 class Logo extends React.Component {
@@ -14,7 +15,9 @@ class Logo extends React.Component {
         </div>
         <form role='search' className='search'>
             <input type='text' />
-                <button type='submit'>Buscar</button>
+            <Link to='/results'>
+              <button type='submit'>Buscar</button>
+            </Link>
         </form>
       </div>
     );
