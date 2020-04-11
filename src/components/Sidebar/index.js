@@ -1,9 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { Icon } from 'antd';
+import styled from 'styled-components';
 
 /* Components */
 import { Container } from './styled';
 import PriceSlider from '../PriceSlider';
+
+const Separator = styled.div`
+  border-bottom: 1px solid white;
+  width: 100%;
+`
 
 const houses = [
   {
@@ -76,19 +82,26 @@ const Sidebar = () => {
         <div className='filters'>
           <PriceSlider defaultMinValue={defaultMinValue} defaultMaxValue={defaultMaxValue} onSetRange={setRange} />
         </div>
+        <div>
+          Alquileres
+        </div>
         <div className='list'>
           {housesParsed.map(house => (
-            <div className='item'>
-              <div className='image'>
-                <img src={house.image_url}></img>
-              </div>
+            <div>
+              <Separator/>
+              <div className='item'>
+                <div className='image'>
+                  <img src={house.image_url}></img>
+                </div>
 
-              <div className='main-info'>
-                <h3>{house.title}</h3>
-                <p className='stars'>Rating: {house.rating}/5</p>
-                <p className='price'>{house.price}$</p>
+                <div className='main-info'>
+                  <h3>{house.title}</h3>
+                  <p className='stars'>Rating: {house.rating}/5</p>
+                  <p className='price'>{house.price}$</p>
+                </div>
               </div>
             </div>
+          
           ))}
         </div>
       </div>

@@ -31,8 +31,21 @@
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     border: solid 1px #fff;
+    padding: 8px;
+  }
+
+  .search img{
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
   }
 
   .search button{
-      background-color: #FF3100;
+    background-color: #FF3100;
+    color: white;
+    font-weight: bold;
+    height: 35px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 0 32px 32px 0;
   }

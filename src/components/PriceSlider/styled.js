@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Slider, InputNumber } from 'antd';
 
 const Container = styled.div`
+  display: grid;
+  grid-gap: 2rem;
   > p {
     color: white;
     font-weight: 500;
@@ -30,4 +32,15 @@ const Container = styled.div`
 const StyledSlider = styled(Slider)``;
 const StyledInputNumber = styled(InputNumber)``;
 
-export { Container, StyledSlider, StyledInputNumber };
+const Roomate = styled.div`
+`
+
+const RoomateOptions = styled.div`
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr;
+  .m4 {
+    margin-left: 4px;
+  }
+`
+
+export { Container, StyledSlider, StyledInputNumber, Roomate, RoomateOptions };
